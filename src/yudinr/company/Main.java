@@ -17,7 +17,8 @@ public class Main {
         searchTree.add(19);
         searchTree.add(921);
         searchTree.add(0);
+        searchTree.add(5);
 
-        searchTree.print(searchTree.top);
+        searchTree.print(searchTree);
     }
 }

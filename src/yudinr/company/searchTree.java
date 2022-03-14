@@ -23,15 +23,18 @@ public class searchTree {
         }
     }
 
-    void print(treeNode treeNode) {
+    void print(treeNode treeNode, int level) {
         if (treeNode == null) return;
-        print(treeNode.right);
+        print(treeNode.right, level+1);
+        for (int i=0; i < level; i++) {
+            System.out.print("\t");
+        }
         System.out.println(treeNode.value);
-        print(treeNode.left);
+        print(treeNode.left, level+1);
     }
 
-    void print() {
-        print(top);
+    void print(searchTree searchTree) {
+        print(top, 0);
     }
 
     boolean isBalance() {
